@@ -1,10 +1,18 @@
 # sample-mapserver
 
-# docker-compose exec db osm2pgsql --create --database gis /scripts/antarctica-latest.osm.pbf
+# usage
 
-docker-compose exec db sh /scripts/download.sh
+```bash
+docker-compose exec -u postgres db wget http://download.geofabrik.de/antarctica-latest.osm.pbf -P /tmp
+```
 
-docker-compose exec -u postgres db osm2pgsql -c -d gis --slim /scripts/antarctica-latest.osm.pbf
+```bash
+docker-compose exec -u postgres db wget https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf -P /tmp
+```
+
+```bash
+docker-compose exec -u postgres db osm2pgsql -c -d gis --slim /tmp/antarctica-latest.osm.pbf
+```
 
 - adminer: http://localhost:8010
 - geoserver: http://localhost:8011/geoserver

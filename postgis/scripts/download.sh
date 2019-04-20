@@ -17,7 +17,7 @@ area=$1
 if [ $area = "planet" ]; then
   wget https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf -P .
 else 
-  wget http://download.geofabrik.de/$area-latest.osm.pbf
+  wget http://download.geofabrik.de/$area-latest.osm.pbf -P .
   # for area in africa antarctica asia australia-oceania central-america europe north-america south-america
   # do
   #   wget http://download.geofabrik.de/$area-latest.osm.pbf -P .
