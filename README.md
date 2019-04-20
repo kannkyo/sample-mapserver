@@ -6,6 +6,19 @@
 docker-compose exec -u postgres db wget http://download.geofabrik.de/antarctica-latest.osm.pbf -P /tmp
 ```
 
+You can choose bellow areas.
+
+africa 
+antarctica
+asia
+australia-oceania
+central-america
+europe 
+north-america
+south-america
+
+Or planet.
+
 ```bash
 docker-compose exec -u postgres db wget https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf -P /tmp
 ```
@@ -17,9 +30,22 @@ docker-compose exec -u postgres db osm2pgsql -c -d gis --slim /tmp/antarctica-la
 - adminer: http://localhost:8010
 - geoserver: http://localhost:8011/geoserver
 
+# default setting
+
+- postgis
+  - user: postgres
+  - password: postgres
+- geoserver
+  - user: admin
+  - password: geoserver
+
 # license
 
-MIT
+- this scripts: MIT
+- geoserver: [Attribution 3.0 Unported (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
+- open street map: [Open Data Commons Open Database License](https://www.openstreetmap.org/copyright/en)
+
+
 
 # reference
 
