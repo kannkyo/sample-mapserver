@@ -55,3 +55,10 @@ docker-compose exec -u postgres db osm2pgsql -c -d gis --slim /tmp/antarctica-la
   - https://postgis.net/docs/postgis_installation.html#install_short_version
   - https://hub.docker.com/r/mdillon/postgis/
   - http://blog.godo-tys.jp/2013/06/13/2277/
+
+
+# UbuntuGIS
+
+deb http://us.archive.ubuntu.com/ubuntu/ bionic main universe multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ bionic-security main universe multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates main universe multiverse
